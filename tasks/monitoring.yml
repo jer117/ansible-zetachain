@@ -1,0 +1,18 @@
+---
+- name: Task Run Cosmos Validator Watcher Container
+  docker_container:
+    name: cosmos-validator-watcher
+    image: "{{ kiln_monitoring_image }}"
+    state: started
+    auto_remove: false  # Ensure the container is not removed after it stops
+    network_mode: host
+    command: "--node https://cosmos-rpc.publicnode.com:443 \
+              --node https://cosmos-rpc.polkachu.com:443 \
+              --validator 3DC4DD610817606AD4A8F9D762A068A81E8741E2:kiln \
+              --validator 25445D0EB353E9050AB11EC6197D5DCB611986DB:allnodes \
+              --validator 9DF8E338C85E879BC84B0AAA28A08B431BD5B548:9df8e338 \
+              --validator ABC1239871ABDEBCDE761D718978169BCD019739:random-name"
+    env:
+      SERVICE_SCHEME: http
+      SERVICE_HOST: "localhost"
+    detach: true

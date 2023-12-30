@@ -1,0 +1,29 @@
+---
+networks:
+  testnet:
+    chain_id: athens_7001-1
+    minimum_gas_prices: "0azeta"
+    consensus_key_prefix: zetavalcons
+    account_key_prefix: zeta
+    genesis_url: https://raw.githubusercontent.com/zeta-chain/network-athens3/main/network_files/config/genesis.json
+    genesis_checksum: sha256:21ecd28dfefc1f651a6537a50fe9d2c317fca8f964bf3e3d04ee92342dbe0bf3
+    genesis_is_archive_file: false
+    grpc_web_enable: false
+    btccore_id: testnet3
+    public_rpc_servers:
+      - 176.34.112.136:26657
+      - 54.187.106.246:26657
+    peer_list:
+      - /ip4/3.218.170.198/tcp/6668/p2p/16Uiu2HAm5iQcAxvqLV21yWh3fpHEe5uejCrQwGjUEpBZh9EQFas1
+    seed_nodes_list:
+      - 91efb62e89c49e933b530fc15a6b93468a395730@52.204.29.109:26656
+      - ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:22556
+    persistent_peers:
+      - 0844caf1e7be0dc1ce1c0523e87140a3c79a1d77@148.251.177.108:22556
+      - af10c27ac4539b6c7f593013267d25797cf68ff2@54.187.106.246:26656
+      - fab89524993355aeb4bb0ab27baced36795dbdaa@46.4.15.110:26656
+      - a918d08544b5f4e0a9eb20bf91f343eb71b6d5ee@164.90.181.99:26656
+      - 943a1f25b8d4cc2a7294d1f18b60e52ee712690b@65.108.224.83:26656
+      - 983972c8d76558b5f0150cd6bffc10ce4f608e4c@65.21.236.163:26656
+      - 94a69bc61e6809b829ebe41ae7dd191719cfa5f3@94.19.249.187:26656
+      - c1355344beed2224ff1377dd102e6f847cce2cb6@34.253.137.241:26656
