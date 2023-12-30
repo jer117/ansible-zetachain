@@ -1,0 +1,23 @@
+---
+- hosts: all
+
+  tasks:
+    - name: Include network specific vars
+      ansible.builtin.include_vars: network.yml
+      tags: [always]
+
+    - name: Include main vars
+      ansible.builtin.include_vars: main.yml
+      tags: [always]
+
+    - name: Include default vars
+      ansible.builtin.include_vars: defaults/main.yml
+      tags: [always]
+
+    - name: Include task zetachain
+      include_tasks: tasks/zetachain.yml
+      tags: zetachain
+
+    - name: Include task monitoring
+      include_tasks: tasks/monitoring.yml
+      tags: monitoring  
